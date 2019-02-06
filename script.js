@@ -319,8 +319,9 @@ var script = document.createElement('script');
 
 var param = 'q=' + query + '&format=json&callback=' + jsonpCallback;
 
-script.src = 'https://query.yahooapis.com/v1/public/yql?' + param;
-script.async = 'async';
+//script.src = 'https://query.yahooapis.com/v1/public/yql?' + param;
+ script.src = 'https://api.rss2json.com/v1/api.json?rss_url=' + param;
+    script.async = 'async';
 document.body.appendChild(script);
 
 })(window, document);
